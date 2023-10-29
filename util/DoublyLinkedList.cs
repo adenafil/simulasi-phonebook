@@ -35,13 +35,42 @@ namespace util
             Size++;
         }
 
-        public void Delete(T data)
+        // public void Delete(T data)
+        // {
+        //     Node<T> sekarang = head;
+            
+        //     while(sekarang != null)
+        //     {
+        //         if (sekarang.data.Equals(data))
+        //         {
+        //             if (sekarang.prev != null)
+        //             {
+        //                 sekarang.prev.next = sekarang.next;
+        //             }
+        //             else
+        //             {
+        //                 head = sekarang.next;
+        //             }
+        //             if (sekarang.next != null)
+        //             {
+        //                 sekarang.next.prev = sekarang.prev;
+        //             }
+        //             return;
+        //         }
+        //         sekarang = sekarang.next;
+        //     }
+
+        // }
+
+
+        public void Delete(String data)
         {
             Node<T> sekarang = head;
             
             while(sekarang != null)
             {
-                if (sekarang.data.Equals(data))
+                String temp = "" + sekarang.data;
+                if (temp.Split(" ")[0] == data)
                 {
                     if (sekarang.prev != null)
                     {
@@ -55,8 +84,7 @@ namespace util
                     {
                         sekarang.next.prev = sekarang.prev;
                     }
-                    return;
-                }
+                    return;                }
                 sekarang = sekarang.next;
             }
 
