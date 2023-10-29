@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Linq;
-using System.Runtime.InteropServices;
 using util;
 
 namespace praktikumASD
@@ -17,7 +15,8 @@ namespace praktikumASD
                 Console.WriteLine("a. Tambah Contact");
                 Console.WriteLine("b. Hapus Contact");
                 Console.WriteLine("c. Tampilkan Contact");
-                Console.WriteLine("d. Keluar");
+                Console.WriteLine("d. Urutkan Contact (Optional)");
+                Console.WriteLine("e. keluar");
 
                 Console.Write("\nPilih Menu : ");
                 char jawaban = Console.ReadLine()[0];
@@ -25,8 +24,10 @@ namespace praktikumASD
                 if (jawaban == 'a') MenuTambahContact();
                 if (jawaban == 'b') MenuHapusContact();
                 if (jawaban == 'c') MenuPrintContact();
-                if (jawaban == 'd') break;
+                if (jawaban == 'd') MenuUrutkanContact();
+                if (jawaban == 'e') break;
             }
+
         }
 
         public static void MenuTambahContact()
@@ -55,6 +56,19 @@ namespace praktikumASD
             Console.WriteLine("\nMenu Print Contact");
             doublyLinkedList.PrintList();
             Console.WriteLine("Total Contact : " + doublyLinkedList.SIZE);
+        }
+
+        public static void MenuUrutkanContact()
+        {
+            Console.WriteLine("\nMenu Urutkan Contact");
+            Console.WriteLine("1. Berdasarkan Nama(Ascending)");
+            Console.WriteLine("2. Berdasarkan Nama(Descending)");
+            Console.Write("Pilih Pengurutan : ");
+            char answer = Console.ReadLine()[0];
+            Console.WriteLine();
+
+            if (answer == '1') doublyLinkedList.AscendingPrint();
+            if (answer == '2') doublyLinkedList.DescendingPrint();
         }
 
     }

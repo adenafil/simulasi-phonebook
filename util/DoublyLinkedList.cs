@@ -1,5 +1,4 @@
 using System;
-using System.Drawing;
 
 namespace util
 {
@@ -71,6 +70,41 @@ namespace util
             {
                 Console.WriteLine(sekarang.data);
                 sekarang = sekarang.next;
+            }
+        }
+
+        public void AscendingPrint()
+        {
+            Node<T> sekarang = head;
+            String[] arrTemp = new string[SIZE]; 
+            for (int i = 0; sekarang != null; i++)
+            {
+                arrTemp[i] = "" + sekarang.data;
+                sekarang = sekarang.next;
+            }
+
+            Array.Sort(arrTemp);
+            foreach (var arr in arrTemp)
+            {
+                Console.WriteLine(arr);
+            }
+        }
+
+        public void DescendingPrint()
+        {
+            Node<T> sekarang = head;
+            String[] arrTemp = new string[SIZE]; 
+            for (int i = 0; sekarang != null; i++)
+            {
+                arrTemp[i] = "" + sekarang.data;
+                sekarang = sekarang.next;
+            }
+
+            Array.Sort(arrTemp);
+            Array.Reverse(arrTemp);
+            foreach (var arr in arrTemp)
+            {
+                Console.WriteLine(arr);
             }
         }
 
