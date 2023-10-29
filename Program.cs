@@ -54,6 +54,7 @@ namespace praktikumASD
         {
             Console.WriteLine("\nMenu Print Contact");
             doublyLinkedList.PrintList();
+            Console.WriteLine("Total Contact : " + doublyLinkedList.SIZE);
         }
 
     }

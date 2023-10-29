@@ -6,7 +6,7 @@ namespace util
     public class DoublyLinkedList<T>
     {
         public Node<T> head;
-        private int Size = 0;
+        private int Size = 1;
         public int SIZE
         {
             get{return Size;}
@@ -34,7 +34,7 @@ namespace util
 
             Size++;
         }
-        
+
 
         public void Delete(String data)
         {
