@@ -1,12 +1,33 @@
 using System;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace util
 {
     public class Contact
     {
         private String noTelepon;
+
         private String nama;
         private String email;
+
+        public String NoTelepon
+        {
+            get {return noTelepon;}
+            set {if (value != null || value != "") noTelepon = value;}
+        }
+
+        public String Nama
+        {
+            get {return nama;}
+            set {if (value != null || value != "") nama = value;}
+        }
+
+        public String Email
+        {
+            get {return email;}
+            set {if (value != null || value != "") email = value;}
+        }
 
         public Contact(String noTelepon, String nama, String email) {
             this.noTelepon = noTelepon;
@@ -15,7 +36,7 @@ namespace util
         }
 
         public override String ToString() {
-            return this.nama + " " + this.noTelepon + " " + this.email;
+            return this.nama + " " + this.NoTelepon + " " + this.email;
         }
     }
 }
