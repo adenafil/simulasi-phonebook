@@ -1,34 +1,57 @@
 ﻿using System;
+using System.Linq;
 using util;
 
 namespace praktikumASD
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static int JumlahContact = 1;
+        private static Contact[] contact = new Contact[JumlahContact];
+        private static DoublyLinkedList<Contact> doublyLinkedList = new DoublyLinkedList<Contact>();
+
+        public static void Main(string[] args)
         {
-            Contact contact = new Contact("082149250644", "Ade Nafil Firmansah", "nafilie9@gmail.com");
-
-            Contact[] tes = new Contact[3];
-
-            tes[0] = new Contact("123", "123", "123");
-            tes[1] = new Contact("124", "124", "124");
-            tes[2] = new Contact("125", "125", "125");
-
-
-            DoublyLinkedList<Contact> contactList = new DoublyLinkedList<Contact>();
-            contactList.Append(contact);
-            contactList.Append(tes[0]);
-            contactList.Append(tes[1]);
-            contactList.Append(tes[2]);
-            contactList.PrintList();
-
-            contactList.Delete(tes[0]);
-            contactList.PrintList();
-            tes[1].NoTelepon = null;
-            Console.WriteLine(tes[1].NoTelepon);
-
-
+            TestAddContact();
+            ShowContact();
         }
+
+        public static void ShowContact() 
+        {
+            Console.WriteLine("Menu Tampilan Contact");
+            doublyLinkedList.PrintList();
+        }
+
+
+        public static void AddContact(String noHp, String nama, String email)
+        {
+            var isFull = true;
+
+            for (var i = 0; i < contact.Length; i++)
+            {
+                if (contact[i] == null)
+                {
+                    isFull = false;
+                    break;
+                }
+            }
+
+
+            if (isFull)
+            {
+                JumlahContact *= 2;
+            }
+
+            doublyLinkedList.Append(new Contact(noHp, nama, email));
+        }
+
+        public static void TestAddContact() {
+            AddContact("123", "ade", "ade@gamil.com");
+            AddContact("123", "nafil", "ade@gamil.com");
+            AddContact("123", "firmansah", "ade@gamil.com");
+            AddContact("123", "adena", "ade@gamil.com");
+        }
+
+
     }
 }

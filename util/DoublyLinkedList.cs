@@ -1,10 +1,16 @@
 using System;
+using System.Drawing;
 
 namespace util
 {
     public class DoublyLinkedList<T>
     {
         public Node<T> head;
+        private int Size = 0;
+        public int SIZE
+        {
+            get{return Size;}
+        }
 
         public void Append(T data)
         {
@@ -26,6 +32,7 @@ namespace util
             terakhir.next = nodeBaru;
             nodeBaru.prev = head;
 
+            Size++;
         }
 
         public void Delete(T data)
