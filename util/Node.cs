@@ -1,12 +1,16 @@
+using System;
+
 namespace util
 {
-    public class Node 
+    public class Node <T>
     {
-        public int data;
-        public Node prev;
-        public Node next;
+        public T data;
+        public Contact contact;
+        public Node<T> prev;
+        public Node<T> next;
 
-        public Node(int d) {
+        public Node(T d) 
+        {
             this.data = d;
         }
     }

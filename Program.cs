@@ -1,4 +1,5 @@
 ﻿using System;
+using util;
 
 namespace praktikumASD
 {
@@ -6,7 +7,10 @@ namespace praktikumASD
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Contact contact = new Contact("082149250644", "Ade Nafil Firmansah", "nafilie9@gmail.com");
+            DoublyLinkedList<Contact> contactList = new DoublyLinkedList<Contact>();
+            contactList.Append(contact);
+            contactList.PrintList();
         }
     }
 }
