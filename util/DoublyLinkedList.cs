@@ -60,6 +60,7 @@ namespace util
                 sekarang = sekarang.next;
             }
 
+            Size--;
         }
 
 
