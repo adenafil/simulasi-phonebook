@@ -10,6 +10,8 @@ namespace praktikumASD
 
         public static void Main(string[] args)
         {
+            // Selama TRUE kode ini akan dieksekusi
+            // agar bisa selalu memilih
             while(true) {
                 Console.WriteLine("\nMenu Utama");
                 Console.WriteLine("a. Tambah Contact");
@@ -21,10 +23,15 @@ namespace praktikumASD
                 Console.Write("\nPilih Menu : ");
                 char jawaban = Console.ReadLine()[0];
 
+                // jika jawaban 'a' maka masuk ke menu tambah contact
                 if (jawaban == 'a') MenuTambahContact();
+                // jika jawaban 'b' maka masuk ke menu hapus contact
                 if (jawaban == 'b') MenuHapusContact();
+                //Jika jawaaban 'c' maka masuk ke menu print contact
                 if (jawaban == 'c') MenuPrintContact();
+                // jika jawaban 'd' maka masuk ke menu urutkan contact
                 if (jawaban == 'd') MenuUrutkanContact();
+                // Jika jawaban 'e' maka program akan berhenti
                 if (jawaban == 'e') break;
             }
 
@@ -67,7 +74,9 @@ namespace praktikumASD
             char answer = Console.ReadLine()[0];
             Console.WriteLine();
 
+            // Jika answer == 1 maka masuk ke menu print ascending
             if (answer == '1') doublyLinkedList.AscendingPrint();
+            // Jika answer == 1 maka masuk ke menu print ascending
             if (answer == '2') doublyLinkedList.DescendingPrint();
         }
 
