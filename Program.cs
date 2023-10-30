@@ -37,6 +37,7 @@ namespace praktikumASD
 
         }
 
+
         public static void MenuTambahContact()
         {
             Console.WriteLine("\nMenu Tambah Contact");
@@ -55,7 +56,7 @@ namespace praktikumASD
             Console.WriteLine("\nMenu Hapus Contact");
             Console.Write("Masukan nama contact yang mau dihapus : ");
             String hapusContact = Console.ReadLine();
-            doublyLinkedList.Delete(hapusContact);
+            doublyLinkedList.Delete(doublyLinkedList.Get(hapusContact));
         }
 
         public static void MenuPrintContact()
