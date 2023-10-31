@@ -72,7 +72,8 @@ namespace util
             Node<T> sekarang = head;
             while (sekarang != null)
             {
-                if (sekarang != null)
+                // cek jika node sekarang sama dengan input data
+                if (sekarang.Equals(data))
                 {
                     // cek jika head == data
                     if (head == data)
