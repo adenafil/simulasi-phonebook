@@ -11,10 +11,5 @@ namespace util
             this.data = d;
         }
 
-        public T Tes()
-        {
-            return data;
-        }
-
     }
 }
