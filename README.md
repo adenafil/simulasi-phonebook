@@ -5,7 +5,6 @@
 
 # Nama Kelompok
 <p>Nama : Ade Nafil Firmansah (3012210002)</p>
-</br>
 <p>Nama : Tegar Ganesia (3012210043)</p>
 
 <p>Terima kasih</p>
