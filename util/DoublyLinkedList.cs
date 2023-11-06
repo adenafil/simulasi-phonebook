@@ -11,7 +11,7 @@ namespace util
             get { return Size; }
         }
 
-
+        // {1, 2 {1, 2 {1, 2 {1, 2}}}};
         public void Append(T data)
         {
             Node<T> nodeBaru = new Node<T>(data);
@@ -20,7 +20,7 @@ namespace util
             if (this.head == null)
             {
                 // head = nodeBaru;
-                head = nodeBaru;
+                this.head = nodeBaru;
                 Size++;
                 return;
             }
@@ -76,10 +76,10 @@ namespace util
                 if (sekarang.Equals(data))
                 {
                     // cek jika head == data
-                    if (head == data)
+                    if (this.head == data)
                     {
                         // maka geser ke next
-                        head = data.next;
+                        this.head = data.next;
                     }
 
                     // cek jika nextnya tidak kosong
